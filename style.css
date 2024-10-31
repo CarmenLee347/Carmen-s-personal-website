@@ -1,0 +1,211 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;              /* 使用 Flexbox 布局 */
+    flex-direction: column;     /* 垂直排列元素 */
+    min-height: 100vh;         /* 最小高度为 100vh，确保页面占满整个视口 */
+  }
+  
+  header{
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+  }
+  
+  header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+  
+  nav {
+    text-align: center;
+    padding: 15px;
+    background-color: #f4f4f4;
+  }
+  
+  /* 默认菜单项样式 */
+nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: gray;              /* 默认灰色 */
+    font-size: 1em;           /* 默认字体大小 */
+    transition: color 0.3s, font-size 0.3s; /* 平滑过渡效果 */
+}
+
+/* 鼠标悬停时的样式 */
+nav a:hover {
+    color: black;             /* 悬停时变为黑色 */
+    font-size: 1.1em;         /* 悬停时稍稍增大字体 */
+}
+
+/* 当前激活的菜单项 */
+nav a.active {
+    color: black;             /* 激活项保持黑色 */
+    font-size: 1.1em;         /* 激活项稍稍增大字体 */
+}
+
+  
+  main {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    flex: 1;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  .entry {
+    margin-bottom: 15px;
+  }
+  
+  .entry h3 {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  .entry p, .entry ul {
+    margin-left: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+footer {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    margin-top: auto;          /* 将 footer 推到底部 */
+    padding: 20px;             /* 添加内边距 */
+    background: #333;          /* 背景颜色 */
+    color: #fff;               /* 文字颜色 */
+    text-align: center;        /* 文字居中 */
+}
+
+  
+  #photo-about {
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: flex-start; /* 使内容在顶部对齐 */
+  }
+  
+  #about {
+    flex: 1; /* 使 About 部分占据剩余空间 */
+    margin-right: 20px; /* 为 About 部分添加右侧边距 */
+  }
+
+  #about p {
+    margin-bottom: 1em; /* 添加底部边距以空出一行 */
+  }
+  
+  .personal-photo {
+    max-width: 33%; /* 让图片最大宽度为50% */
+    height: auto; /* 高度自适应 */
+    border-radius: 10px; /* 添加圆角 */
+    margin: 20px 0; /* 上下留出间距 */
+  }
+
+  .education-content {
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.school-logo {
+    max-width: 80px; /* 控制 logo 最大宽度 */
+    height: auto; /* 高度自适应 */
+    margin-right: 15px; /* 添加右边距以分隔学校名称 */
+}
+
+.education-text {
+    display: flex; 
+    flex-direction: column; /* 垂直排列文本 */
+}
+
+.link {
+    color: #007BFF; /* 链接颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.link:hover {
+    text-decoration: underline; /* 悬停时添加下划线 */
+}
+
+ /* 为 section 标题增加额外的垂直间距 */
+#education-research h2 {
+    margin-top: 40px; /* 顶部间距，使标题之间的间距更大 */
+}
+
+/* 可选：单独控制 “Research” 标题的顶部间距 */
+#education-research h2:nth-of-type(2) {
+    margin-top: 60px; /* 增加 “Research” 部分的间距 */
+}
+
+/* 增加研究兴趣和第一个研究经历之间的空行 */
+#education-research .entry {
+    margin-top: 20px; /* 调整数值以适应所需的间距 */
+}
+
+#art {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 10px;
+}
+
+.thumbnail img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Makes images square */
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.caption {
+    margin-top: 10px;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}
+  
