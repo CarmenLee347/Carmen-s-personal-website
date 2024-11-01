@@ -26,6 +26,15 @@
     margin-bottom: 5px;
   }
   
+  header p a {
+    color: #a7a6a6; /* 设置浅灰色，以提高对比度 */
+    text-decoration: none; /* 去掉下划线 */
+  }
+  
+  header p a:hover {
+    color: #e8e8e8; /* 悬停时变为白色，增强可见性 */
+  }
+  
   nav {
     text-align: center;
     padding: 15px;
@@ -92,7 +101,6 @@ footer {
     color: #fff;               /* 文字颜色 */
     text-align: center;        /* 文字居中 */
 }
-
   
   #photo-about {
     display: flex; /* 使用 Flexbox 布局 */
